@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NaVILA: Legged Robot Vision-Language-Action Model for Navigation</title>
+    <title>What Limits Vision-and-Language Navigation?</title>
 
     <!-- Fonts - combined Google Fonts request -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro|Material+Icons">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
     <!-- Favicon -->
-    <link rel="icon" href="images/icon.png">
+    <link rel="icon" href="logo/logo.png">
     
     <!-- JavaScript Dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -159,126 +159,84 @@
 </style>
 
 <body>
+
+    <!-- Top nav bar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-menu" style="justify-content:center; display:flex;">
+            <div class="navbar-start" style="flex-grow:1; justify-content:center;">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" style="font-size:0.95rem;">
+                        <i class="fas fa-search" style="margin-right:0.4rem;"></i> More Research
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="#">DreamNav</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <!-- Optimized hero section -->
     <section class="hero">
         <div class="hero-body">
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                            <video class="logo-video" src="images/logo-ani.mp4" width="100" height="100" autoplay muted loop playsinline
-                                loading="eager"></video>
-                        <h1 class="title is-1 publication-title">NaVILA: Legged Robot Vision-Language-Action Model
-                            for
-                            Navigation</h1>
-                            
-                            <span class="rss_text">
-                                <!-- CoRL 2023 <span style="color:rgb(182, 0, 10);font-weight:bolder;">Oral</span> -->
-                                RSS 2025
-                            </span>
+                        <img src="logo/logo.png" alt="logo" width="120" style="margin-bottom: 1rem;"><br>
+                        <h1 class="title is-2 publication-title">What Limits Vision-and-Language Navigation ?</h1>
 
+                        <h3 class="title is-3" style="color: #1a6fc4; margin-top: 0.5rem;">
+                            Under Review
+                        </h3>
+
+                        <div class="is-size-5 publication-authors" style="margin-top: 0.8rem;">
+                            <span class="author-block" style="color:#5aab5a;">Yunheng Wang</span>,
+                            <span class="author-block" style="color:#5aab5a;">Yuetong Fang</span>,
+                            <span class="author-block" style="color:#5aab5a;">Taowen Wang</span>,
+                            <span class="author-block" style="color:#5aab5a;">Lusong Li</span>,
+                            <span class="author-block" style="color:#5aab5a;">Kun Liu</span>,
+                            <span class="author-block" style="color:#5aab5a;">Junzhe Xu</span>
+                        </div>
                         <div class="is-size-5 publication-authors">
-                            <!-- First Group of 4 Authors -->
-                            <div class="author-group">
-                                <span class="author-block">
-                                    <a href="https://www.anjiecheng.me"
-                                        style="color:#008AD7;font-weight:normal;">An-Chieh Cheng</a></a><sup>*</sup>,
-                                </span>
-                                <span class="author-block">
-                                    <a href="https://yandongji.github.io/"
-                                        style="color:#008AD7;font-weight:normal;">Yandong Ji</a><sup>*</sup>,
-                                </span>
-                                <span class="author-block">
-                                    <a href="https://yang-zj1026.github.io/"
-                                        style="color:#008AD7;font-weight:normal;">Zhaojing Yang</a><sup>*</sup>,
-                                </span>
-                                <span class="author-block">
-                                    <a href="#" style="color:#008AD7;font-weight:normal;">Zaitian Gongye</a>,
-                                    </span>
-                                    <span class="author-block">
-                                    <a href="https://maureenzou.github.io/"
-                                        style="color:#008AD7;font-weight:normal;">Xueyan Zou</a>,
-                                </span>
-                            </div>
-
-                            <!-- Second Group of 3 Authors -->
-                            <div class="author-group">
-                                <span class="author-block">
-                                    <a href="https://jankautz.com/" style="color:#F2A900;font-weight:normal;">Jan
-                                        Kautz</a>,
-                                </span>
-                                <span class="author-block">
-                                    <a href="https://ebiyik.github.io/" style="color:#F2A900;font-weight:normal;">Erdem
-                                        Bıyık</a>,
-                                </span>
-                                <span class="author-block">
-                                    <a href="https://hongxu-yin.github.io/"
-                                        style="color:#008AD7;font-weight:normal;">Hongxu
-                                        Yin</a><sup>&dagger;</sup>,
-                                </span>
-                                <span class="author-block">
-                                    <a href="https://sifeiliu.net/" style="color:#f68946;font-weight:normal;">Sifei
-                                        Liu</a><sup>&dagger;</sup>
-                                </span>
-                                <span class="author-block">
-                                    <a href="https://xiaolonw.github.io/"
-                                        style="color:#f68946;font-weight:normal;">Xiaolong
-                                        Wang</a><sup>&dagger;</sup>,
-                                </span>
-                            </div>
-                        </div>
-                        <div class=" is-size-5 publication-authors">
-                            UC San Diego, USC, NVIDIA
+                            <span class="author-block" style="color:#5aab5a;">Zizhao Yuan</span>,
+                            <span class="author-block" style="color:#5aab5a;">Yixiao Feng</span>,
+                            <span class="author-block" style="color:#5aab5a;">Zecui Zeng</span>,
+                            <span class="author-block" style="color:#5aab5a;">Renjing Xu</span>
                         </div>
 
-                        <div class=" is-size-7">
-                            <sup>*</sup>Equal Contribution, ordered
-                            alphabetically<br><sup>&dagger;</sup> Equal Advising
+                        <div class="is-size-6 publication-authors" style="margin-top: 0.4rem; color: #444;">
+                            JD Explore Academy &nbsp;&nbsp; The Hong Kong University of Science and Technology (Guangzhou)
                         </div>
 
-                        <div class="column has-text-centered">
+                        <div class="column has-text-centered" style="margin-top: 1.2rem;">
                             <div class="publication-links">
                                 <span class="link-block">
-                                    <a href="./static/navila_paper.pdf" class="button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="far fa-file-pdf"></i>
-                                        </span>
-                                        <span>pdf</span>
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                        <span>arXiv</span>
                                     </a>
                                 </span>
                                 <span class="link-block">
-                                    <a href="https://arxiv.org/abs/2412.04453" class="button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="ai ai-arxiv"></i>
-                                        </span>
-                                        <span>arxiv</span>
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon"><i class="fab fa-github"></i></span>
+                                        <span>GitHub</span>
                                     </a>
                                 </span>
                                 <span class="link-block">
-                                    <a href="https://github.com/AnjieCheng/NaVILA" class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="fab fa-github"></i>
-                                        </span>
-                                        <span>Code (VLA)</span>
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon"><i class="fas fa-database"></i></span>
+                                        <span>Checkpoints</span>
                                     </a>
                                 </span>
                                 <span class="link-block">
-                                    <a href="https://github.com/yang-zj1026/legged-loco" class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="fab fa-github"></i>
-                                        </span>
-                                        <span>Code (Low-level)</span>
-                                    </a>
-                                    </span>
-                                    <span class="link-block">
-                                        <a href="https://github.com/yang-zj1026/VLN-CE-Isaac" class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="fas fa-star"></i>
-                                        </span>
-                                        <span>Benchmark</span>
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon"><i class="fas fa-folder-open"></i></span>
+                                        <span>Datasets</span>
                                     </a>
                                 </span>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -312,41 +270,9 @@
             <!-- Abstract. -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-six-fifths">
-                    <h2 class="title is-3">🔥 Highlights</h2>
+                    <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
-                        <ol type="1">
-
-                            <li><b>Strongly Generalizable VLA Model</b>. We tamed a VLM model into a VLA model and
-                                trained it on diverse datasets, including <span style="color: #669900;">real-world human
-                                    video data</span>, simulated indoor navigation data, and question-answering tasks.
-                                NaVILA outperform all methods that do not rely on simulator pre-trained waypoint
-                                predictors, even when those methods leverage additional sensors.</li>
-
-                            <li><b>Vision-Based Legged Robot Policy</b>. We introduce an <span
-                                    style="color: #669900;">end-to-end vsion-based locomotion policy trained without
-                                    teacher-student distillation</span>.
-                                By directly interacting with the environment using LiDAR during training, our approach
-                                significantly reduces the
-                                sim-to-real gap.
-                                Our policy ensures safety in challenging environments, such as near transparency
-                                surfaces, and excels at
-                                traversing rough terrain.</li>
-
-                            <li><b>VLN-CE-Isaac Benchmark</b>. We introduce a <span
-                                    style="color: #669900;">high-fidelity</span>, <span
-                                    style="color: #669900;">physics-realistic</span> benchmark
-                                for low-level robotic
-                                control. It provides a safe, scalable platform to evaluate navigation across diverse
-                                robots and scenarios, reducing
-                                real-world testing costs and risks. </li>
-
-                            <li><b>Real-World Deployment</b>. NaVILA demonstrates strong performance in challenging
-                                real-world environments with <span style="color: #669900;">quadruped</span> and <span
-                                    style="color: #669900;">humanoid</span> robots,
-                                showcasing its generalization capabilities and robustness.
-
-                                <br>
-                        </ol>
+                        <p>Vision-and-Language Navigation (VLN) is a cornerstone of embodied intelligence. However, current agents often suffer from significant performance degradation when transitioning from simulation to real-world deployment, primarily due to perceptual instability (e.g., lighting variations and motion blur) and under-specified instructions. While existing methods attempt to bridge this gap by scaling up model size and training data, we argue that the bottleneck lies in the lack of robust spatial grounding and cross-domain priors. In this paper, we propose <b>StereoNav</b>, a robust Vision-Language-Action framework designed to enhance real-world navigation consistency. To address the inherent gap between synthetic training and physical execution, we introduce <b>Target-Location Priors</b> as a persistent bridge. These priors provide stable visual guidance that remains invariant across domains, effectively grounding the agent even when instructions are vague. Furthermore, to mitigate visual disturbances like motion blur and illumination shifts, StereoNav leverages stereo vision to construct a unified representation of semantics and geometry, enabling precise action prediction through enhanced depth awareness. Extensive experiments on R2R-CE and RxR-CE demonstrate that StereoNav achieves state-of-the-art accuracy while using significantly fewer parameters and less training data than prior scaling-based approaches. More importantly, real-world robotic deployments confirm that StereoNav substantially improves navigation reliability in complex, unstructured environments.</p>
                     </div>
                 </div>
             </div>
@@ -357,8 +283,7 @@
     <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
             <h2 class="title is-3">
-                <img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                Real-world Results: Booster T1
+                Visualization Results on R2R-CE
             </h2>
         </div>
     </div>
@@ -370,11 +295,11 @@
 
                     <div class="row g-1">
                         <div class="col px-1">
-                            <video playsinline autoplay loop muted controls src="./videos/Real/t1/1.mp4"
+                            <video class="lazy-video" playsinline autoplay loop muted controls data-src="./videos/Real/t1/1.mp4"
                                 width="100%"></video>
                         </div>
                         <div class="col px-1">
-                            <video playsinline autoplay loop muted controls src="./videos/Real/t1/2.mp4"
+                            <video class="lazy-video" playsinline autoplay loop muted controls data-src="./videos/Real/t1/2.mp4"
                                 width="100%"></video>
                         </div>
                     </div>
@@ -384,305 +309,64 @@
     </div>
 </section>
 
-    <section class="section">
+<section class="section">
+    <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
-            <div class="column is-six-fifths">
-                <h2 class="title is-3">
-                    <img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                    Real-world Results: Unitree Go2
-                </h2>
-            </div>
-        </div>
-        <div class="container is-max-desktop" style="max-width: 1200px;">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                    <video src="videos/Real/output_grid_1_1.mp4" width="100%" autoplay muted loop playsinline
-                        style="display: block; margin: 0; padding: 0;"></video>
-                    <video src="videos/Real/output_grid_2_1.mp4" width="100%" autoplay muted loop playsinline
-                        style="display: block; margin: 0; padding: 0; margin-top: 3px;"></video>
-                </div>
-                </div>
-        </div>
-    </section>
-    
-
-
-    <section class="section">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-six-fifths">
-                <h2 class="title is-3">
-                    <img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                    Real-world Results: Unitree G1
-                </h2>
+            <div class="column">
+                <h2 class="title is-3">Visualization Results on Real-World</h2>
             </div>
         </div>
 
-        <div class="container is-max-desktop" style="max-width: 1200px;">
+        <style>
+            .vid-card { border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+            .scene-block { margin-bottom: 3rem; }
+            .scene-block h3 { margin-bottom: 1rem; }
+        </style>
+
+        <div class="scene-block">
+            <h3 class="title is-4 has-text-centered">Lobby</h3>
+            <div class="columns is-centered" style="margin-bottom:0.5rem;">
+                <div class="column"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/lobby/1.mp4" width="100%"></video></div>
+            </div>
             <div class="columns is-centered">
-                <div class="column is-full-width">
-                    <div class="content">
-
-                        <div class="row g-1">
-                            <div class="col px-1">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/2.mp4"
-                                    width="100%"></video>
-                            </div>
-                        </div>
-                        <div class="row g-1">
-                            <div class="col px-1">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/1.mp4" width="100%"></video>
-                            </div>
-                            <div class="col px-1">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/4_1.mp4" width="100%"></video>
-                            </div>
-                            <div class="col px-1">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/3.mp4" width="100%"></video>
-                            </div>
-                            </div>
-                            </div>
-                </div>
-                </div>
-                </div>
-    </section>
-
-
-
-    <section class="section">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-six-fifths">
-                <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                    Learning from YouTube Human Touring Videos</h2>
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/lobby/2.mp4" width="100%"></video></div>
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/lobby/3.mp4" width="100%"></video></div>
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/lobby/4.mp4" width="100%"></video></div>
             </div>
         </div>
-        <div class="columns is-centered has-text-centered">
-            <video src="videos/method/pipeline.mp4" width="900" autoplay muted loop> </video>
-        </div>
 
-        <div class="container is-max-desktop" style="max-width: 1200px;">
+        <div class="scene-block">
+            <h3 class="title is-4 has-text-centered">Outdoor</h3>
+            <div class="columns is-centered" style="margin-bottom:0.5rem;">
+                <div class="column"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/outdoor/1.mp4" width="100%"></video></div>
+            </div>
             <div class="columns is-centered">
-
-                <div class="column is-full-width">
-                    <div class="content has-text-justified">
-
-                        <tr>
-                            <td>
-                                <div class="row g-1">
-                                    <div class="col px-1">
-                                        <video playsinline autoplay loop muted controls src="videos/human/output_grid_1.mp4" width="100%"></video>
-                                    </div>
-                                </div>
-
-                                <br>
-                            </td>
-                        </tr>
-
-                    </div>
-                </div>
-            </div>
-    </section>
-
-
-
-    <section class="section">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-six-fifths">
-                <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                    Results: VLN-CE-Isaac NaVILA-Go2-Vision</h2>
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/outdoor/2.mp4" width="100%"></video></div>
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/outdoor/3.mp4" width="100%"></video></div>
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/outdoor/4.mp4" width="100%"></video></div>
             </div>
         </div>
 
-        <div class="container is-max-desktop has-text-centered">
-            <div id="results-carousel-teaser" class="carousel results-carousel">
-                <div class="item item-video2">
-                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/isaac/go2_vision_360.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/isaac/go2_vision_359.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/isaac/go2_vision_234.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-    <section class="section">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-six-fifths">
-                <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                    Results: VLN-CE-Issac NaVILA-H1-Vision</h2>
-            </div>
-        </div>
-
-        <div class="container is-max-desktop has-text-centered">
-            <div id="results-carousel-teaser" class="carousel results-carousel">
-                <div class="item item-video2">
-                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/isaac/h1_vision_2.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/isaac/h1_vision_1.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/isaac/h1_vision_3.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-    <section class="section">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-six-fifths">
-                <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                    Results: VLN-CE-Issac Vision vs Blind Policy</h2>
-            </div>
-        </div>
-        <div class="container is-max-desktop">
+        <div class="scene-block">
+            <h3 class="title is-4 has-text-centered">Gym</h3>
             <div class="columns is-centered">
-                <div class="column is-full-width">
-                    <div class="content has-text-justified">
-                        <tr>
-                            <td>
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/isaac/go2_compare_final.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                        <figcaption>
-                                            The vision-based policy performs better in Success Rate than the blind
-                                            policy
-                                            because it avoids obstacles more
-                                            effectively.
-                                        </figcaption>
-
-                                    </div>
-                                </div>
-                                <br>
-                            </td>
-                        </tr>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-
-    <section class="section">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-six-fifths">
-                <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                    Results: R2R-CE (Habitat)</h2>
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/gym/1.mp4" width="100%"></video></div>
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/gym/2.mp4" width="100%"></video></div>
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/gym/3.mp4" width="100%"></video></div>
             </div>
         </div>
 
-        <div class="container is-max-desktop has-text-centered">
-            <div id="results-carousel-teaser" class="carousel results-carousel">
-                <div class="item item-video2">
-                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/R2R/episode=837.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/R2R/episode=866.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-video3">
-                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/R2R/episode=172.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-video3">
-                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/R2R/episode=115.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-video3">
-                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/R2R/episode=177.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-video3">
-                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/R2R/episode=275.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-video3">
-                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/R2R/episode=283.mp4" type="video/mp4">
-                    </video>
-                </div>
+        <div class="scene-block">
+            <h3 class="title is-4 has-text-centered">Office</h3>
+            <div class="columns is-centered">
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/office/1.mp4" width="100%"></video></div>
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/office/2.mp4" width="100%"></video></div>
+                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/office/3.mp4" width="100%"></video></div>
             </div>
         </div>
+    </div>
+</section>
 
-    </section>
-
-
-    <section class="section">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-six-fifths">
-                <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                    Results: RxR-CE (Habitat)</h2>
-            </div>
-        </div>
-
-        <div class="container is-max-desktop has-text-centered">
-            <div id="results-carousel-teaser" class="carousel results-carousel">
-                <div class="item item-video2">
-                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/RxR/episode=6676.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/RxR/episode=594.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/RxR/episode=594.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/RxR/episode=1602.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
-                        <source src="./videos/RxR/episode=1101.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <style>
-        #BibTeX {
-            margin-bottom: -80px;
-        }
-
-        #Acknowledgement {
-            margin-top: -80px;
-        }
-    </style>
 
 
 
@@ -716,6 +400,23 @@ title = {NaVILA: Legged Robot Vision-Language-Action Model for Navigation},
 
 
     <!-- </div> -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const lazyVideos = document.querySelectorAll('video.lazy-video');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    video.src = video.dataset.src;
+                    video.load();
+                    observer.unobserve(video);
+                }
+            });
+        }, { rootMargin: '200px' });
+        lazyVideos.forEach(video => observer.observe(video));
+    });
+    </script>
 
 </body>
 
