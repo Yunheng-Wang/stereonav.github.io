@@ -156,6 +156,159 @@
   font-weight: 1000;
 }
 
+    /* === Page-level beautification === */
+    html { scroll-behavior: smooth; }
+
+    body {
+        font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #2c3e50;
+    }
+
+    /* Section title accent */
+    .title.is-3 {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem !important;
+        color: #1a2b4a;
+        letter-spacing: 0.5px;
+    }
+    .title.is-3:not(.no-accent)::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 70%;
+        height: 3px;
+        background: linear-gradient(90deg, #1a6fc4, #5aab5a);
+        border-radius: 2px;
+    }
+
+    /* Figure card */
+    .figure-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+        padding: 1.5rem;
+        margin: 0 auto;
+        transition: box-shadow 0.3s ease;
+    }
+    .figure-card:hover {
+        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.12);
+    }
+    .figure-card img {
+        border-radius: 6px;
+    }
+
+    /* Caption */
+    .figure-caption {
+        margin-top: 1.2rem;
+        font-size: 0.92rem;
+        line-height: 1.7;
+        color: #5a6478;
+        text-align: justify;
+    }
+    .figure-caption b {
+        color: #1a2b4a;
+    }
+
+    /* Buttons polish */
+    .publication-links .button.is-dark {
+        background-color: #1a2b4a;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .publication-links .button.is-dark:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(26, 43, 74, 0.25);
+        background-color: #243a63;
+    }
+
+    /* Stereo video clip */
+    .stereo-wrap {
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        aspect-ratio: 1/1;
+    }
+    .stereo-wrap video {
+        width: 200%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+        display: block;
+    }
+    .stereo-wrap.right video { object-position: right; }
+    .stereo-side-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(4px);
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.4);
+        border-radius: 50%;
+        font-size: 0.9rem;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+        z-index: 2;
+        opacity: 0;
+    }
+    .stereo-wrap:hover .stereo-side-btn { opacity: 1; }
+    .stereo-side-btn:hover { background: rgba(255,255,255,0.45); }
+    .stereo-side-btn.left-btn { left: 5px; }
+    .stereo-side-btn.right-btn { right: 5px; }
+    .stereo-wrap .stereo-label {
+        position: absolute;
+        bottom: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.4);
+        backdrop-filter: blur(4px);
+        color: #fff;
+        font-size: 0.65rem;
+        font-weight: 500;
+        padding: 1px 7px;
+        border-radius: 10px;
+        pointer-events: none;
+        letter-spacing: 0.08em;
+    }
+
+
+    .vid-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .vid-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    /* SOTA comparison table */
+    .sota-table { width:100%; border-collapse:collapse !important; font-size:0.8rem; text-align:center; background:#fff; }
+    .sota-table thead tr:first-child { background:#fff !important; color:#1a2b4a !important; border-bottom: 1px solid #e0e6f0; }
+    .sota-table thead tr:last-child { background:#f7f9fc !important; color:#4a5568 !important; font-size:0.75rem; border-bottom: 2px solid #1a6fc4; }
+    .sota-table thead th { padding:10px 6px !important; border:none !important; font-weight:600; letter-spacing:0.02em; }
+    .sota-table tbody td { padding:6px 5px !important; border-bottom:1px solid #f0f4f8 !important; border-top:none !important; color:#2d3748; }
+    .sota-table tbody tr:hover td { background:#f0f7ff !important; }
+    .sota-table .group-header td { background:linear-gradient(90deg,#eef4ff,#f5f8ff) !important; color:#1a6fc4 !important; font-style:italic; font-size:0.78rem; font-weight:600; padding:6px 10px !important; border-top:1px solid #dce8f8 !important; border-bottom:1px solid #dce8f8 !important; letter-spacing:0.03em; }
+    .sota-table .col-sep { border-right:1px solid #e2eaf4 !important; }
+    .sota-table td:first-child { text-align:left !important; padding-left:12px !important; font-weight:500; color:#1a2b4a; }
+    .sota-table .row-light td { background:#eff6ff !important; }
+    .sota-table .row-light td:first-child { border-left: 3px solid #60a5fa; }
+    .sota-table .row-dark td { background:#dbeafe !important; font-weight:600; }
+    .sota-table .row-dark td:first-child { border-left: 3px solid #1a6fc4; }
+    /* Real-world video play overlay */
+    .rw-wrap { position: relative; border-radius: 6px; overflow: hidden; cursor: pointer; display: block; line-height: 0; }
+    .rw-wrap .play-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; transition: background 0.2s; z-index: 1; }
+    .rw-wrap .play-overlay:hover { background: rgba(0,0,0,0.45); }
+    .rw-wrap .play-overlay svg { width: 52px; height: 52px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4)); }
+    .rw-wrap.playing .play-overlay { display: none; }
+
 </style>
 
 <body>
@@ -169,7 +322,7 @@
                         <i class="fas fa-search" style="margin-right:0.4rem;"></i> More Research
                     </a>
                     <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item" href="#">DreamNav</a>
+                        <a class="navbar-item" href="#">Hidden</a>
                     </div>
                 </div>
             </div>
@@ -185,27 +338,9 @@
                         <img src="logo/logo.png" alt="logo" width="120" style="margin-bottom: 1rem;"><br>
                         <h1 class="title is-2 publication-title">What Limits Vision-and-Language Navigation ?</h1>
 
-                        <h3 class="title is-3" style="color: #1a6fc4; margin-top: 0.5rem;">
-                            Under Review
-                        </h3>
-
-                        <div class="is-size-5 publication-authors" style="margin-top: 0.8rem;">
-                            <span class="author-block" style="color:#5aab5a;">Yunheng Wang</span>,
-                            <span class="author-block" style="color:#5aab5a;">Yuetong Fang</span>,
-                            <span class="author-block" style="color:#5aab5a;">Taowen Wang</span>,
-                            <span class="author-block" style="color:#5aab5a;">Lusong Li</span>,
-                            <span class="author-block" style="color:#5aab5a;">Kun Liu</span>,
-                            <span class="author-block" style="color:#5aab5a;">Junzhe Xu</span>
-                        </div>
-                        <div class="is-size-5 publication-authors">
-                            <span class="author-block" style="color:#5aab5a;">Zizhao Yuan</span>,
-                            <span class="author-block" style="color:#5aab5a;">Yixiao Feng</span>,
-                            <span class="author-block" style="color:#5aab5a;">Zecui Zeng</span>,
-                            <span class="author-block" style="color:#5aab5a;">Renjing Xu</span>
-                        </div>
-
-                        <div class="is-size-6 publication-authors" style="margin-top: 0.4rem; color: #444;">
-                            JD Explore Academy &nbsp;&nbsp; The Hong Kong University of Science and Technology (Guangzhou)
+                        <div style="margin-top: 0.5rem;">
+                            <div style="color: #1a6fc4; font-size: 2.3rem; font-weight: 700;">Under Review</div>
+                            <div style="color:#5aab5a; font-weight:600; font-size:1.3rem; margin-top: 1.5rem;">Anonymous Authors</div>
                         </div>
 
                         <div class="column has-text-centered" style="margin-top: 1.2rem;">
@@ -218,18 +353,23 @@
                                 </span>
                                 <span class="link-block">
                                     <a href="#" class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon"><i class="fab fa-github"></i></span>
+                                        <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                                        <span>PDF</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://github.com/Yunheng-Wang/StereoNav" class="external-link button is-normal is-rounded is-dark">
                                         <span>GitHub</span>
                                     </a>
                                 </span>
                                 <span class="link-block">
-                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                    <a href="https://huggingface.co/anonymous-stereonav/StereoNav_Model" class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon"><i class="fas fa-database"></i></span>
                                         <span>Checkpoints</span>
                                     </a>
                                 </span>
                                 <span class="link-block">
-                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                    <a href="https://huggingface.co/datasets/anonymous-stereonav/StereoNav_DataSet" class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon"><i class="fas fa-folder-open"></i></span>
                                         <span>Datasets</span>
                                     </a>
@@ -243,28 +383,6 @@
         </div>
     </section>
 
-    <section class="section" style="padding-top: 0.5rem; padding-bottom: 4rem;">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column">
-                    <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://www.youtube.com/embed/QsF5x3m_p7U?si=owOdR8I_GxMMeQuI"
-                            allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                        </iframe>
-                    </div>
-                    <div style="margin-top: 0.5rem;">
-                        <h3 class="title is-5" style="margin-bottom: 0.75rem;">TL;DR</h3>
-                        <p class="has-text-justified" style="font-weight: 600; font-size: 0.95rem;">
-                            NaVILA is a two-level framework that combines VLAs with locomotion skills for navigation. It
-                            generates high-level language-based commands, while a real-time locomotion policy ensures
-                            obstacle avoidance.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="section" style="background-color:#efeff081">
         <div class="container is-max-desktop">
             <!-- Abstract. -->
@@ -272,7 +390,66 @@
                 <div class="column is-six-fifths">
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
-                        <p>Vision-and-Language Navigation (VLN) is a cornerstone of embodied intelligence. However, current agents often suffer from significant performance degradation when transitioning from simulation to real-world deployment, primarily due to perceptual instability (e.g., lighting variations and motion blur) and under-specified instructions. While existing methods attempt to bridge this gap by scaling up model size and training data, we argue that the bottleneck lies in the lack of robust spatial grounding and cross-domain priors. In this paper, we propose <b>StereoNav</b>, a robust Vision-Language-Action framework designed to enhance real-world navigation consistency. To address the inherent gap between synthetic training and physical execution, we introduce <b>Target-Location Priors</b> as a persistent bridge. These priors provide stable visual guidance that remains invariant across domains, effectively grounding the agent even when instructions are vague. Furthermore, to mitigate visual disturbances like motion blur and illumination shifts, StereoNav leverages stereo vision to construct a unified representation of semantics and geometry, enabling precise action prediction through enhanced depth awareness. Extensive experiments on R2R-CE and RxR-CE demonstrate that StereoNav achieves state-of-the-art accuracy while using significantly fewer parameters and less training data than prior scaling-based approaches. More importantly, real-world robotic deployments confirm that StereoNav substantially improves navigation reliability in complex, unstructured environments.</p>
+                        <p>Vision-and-Language Navigation (VLN) is a cornerstone of embodied intelligence. However, current agents often suffer from significant performance degradation when transitioning from simulation to real-world deployment, primarily due to perceptual instability (e.g., lighting variations and motion blur) and under-specified instructions. While existing methods attempt to bridge this gap by scaling up model size and training data, we argue that the bottleneck lies in the lack of robust spatial grounding and cross-domain priors. In this paper, we propose <b>StereoNav</b>, a robust Vision-Language-Action framework designed to enhance real-world navigation consistency. To address the inherent gap between synthetic training and physical execution, we introduce Target-Location Priors as a persistent bridge. These priors provide stable visual guidance that remains invariant across domains, effectively grounding the agent even when instructions are vague. Furthermore, to mitigate visual disturbances like motion blur and illumination shifts, StereoNav leverages stereo vision to construct a unified representation of semantics and geometry, enabling precise action prediction through enhanced depth awareness. Extensive experiments on R2R-CE and RxR-CE demonstrate that StereoNav achieves state-of-the-art egocentric RGB performance, with SR and SPL scores of 81.1% and 68.3%, and 67.5% and 52.0%, respectively, while using significantly fewer parameters and less training data than prior scaling-based approaches. More importantly, real-world robotic deployments confirm that StereoNav substantially improves navigation reliability in complex, unstructured environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3">Pilot Study</h2>
+                </div>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-full-width">
+                    <div class="figure-card">
+                        <h3 class="title is-5" style="text-align: center; margin-bottom: 1rem; padding: 0.4rem 1rem; border-left: 4px solid #1a6fc4; border-right: 4px solid #1a6fc4; background: #f4f8ff; border-radius: 4px; display: inline-block; width: 100%; box-sizing: border-box;">The Impact of Visual Uncertainty</h3>
+                        <figure class="image" style="margin: 0; text-align: center;">
+                            <img src="image/picture_1.png" alt="Impact of visual uncertainty" style="width: 100%; height: auto; display: inline-block;">
+                        </figure>
+                        <p class="figure-caption">
+                            <b>Impact of visual uncertainty on VLN agents.</b> (a) <b>Top:</b> Visual examples of four common perturbations during embodied navigation. (b) <b>Bottom:</b> Performance degradation of representative open-source VLN methods, where the LLaVA-based and Qwen-based methods correspond to StreamVLN and JanusVLN, respectively. Although existing agents perform competitively in the ideal setting, their navigation performance degrades markedly under severe visual perturbations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-centered" style="margin-top: 2rem;">
+                <div class="column is-full-width">
+                    <div class="figure-card">
+                        <h3 class="title is-5" style="text-align: center; margin-bottom: 1rem; padding: 0.4rem 1rem; border-left: 4px solid #1a6fc4; border-right: 4px solid #1a6fc4; background: #f4f8ff; border-radius: 4px; display: inline-block; width: 100%; box-sizing: border-box;">The Impact of Instruction Ambiguity</h3>
+                        <figure class="image" style="margin: 0; text-align: center;">
+                            <img src="image/picture_2.png" alt="Impact of instructional under-specification" style="width: 100%; height: auto; display: inline-block;">
+                        </figure>
+                        <p class="figure-caption">
+                            <b>Impact of instructional under-specification on VLN agents.</b> (a) <b>Top:</b> Representative cases of Directional Ambiguity, where under-specified route or orientation cues permit multiple feasible paths, and Docking Ambiguity, where vague goal descriptions permit multiple plausible stopping targets. (b) <b>Bottom:</b> Distributions of ambiguity scores across representative VLMs, where lower scores indicate stronger ambiguity effects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3">Overview</h2>
+                </div>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-full-width">
+                    <div class="figure-card">
+                        <figure class="image" style="margin: 0; text-align: center;">
+                            <img src="image/main.png" alt="Overview of StereoNav" style="width: 100%; height: auto; display: inline-block;">
+                        </figure>
+                        <p class="figure-caption">
+                            <b>Overview of StereoNav.</b>
+                            StereoNav takes stereo RGB observations, a navigation instruction, and a target-location prior as input. The target prior is rendered as persistent visual guidance, while stereo observations are encoded into unified semantic, structural, and geometric tokens through 2D semantic, 2D structural, and 3D geometry encoders. These tokens are then processed by the MLLM for joint action and depth prediction. The right panels illustrate detailed designs of selected modules.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -280,31 +457,139 @@
     </section>
 
 <section class="section">
-    <div class="columns is-centered has-text-centered">
-        <div class="column is-six-fifths">
-            <h2 class="title is-3">
-                Visualization Results on R2R-CE
-            </h2>
-        </div>
-    </div>
-
-    <div class="container is-max-desktop" style="max-width: 1200px;">
-        <div class="columns is-centered">
-            <div class="column is-full-width">
-                <div class="content">
-
-                    <div class="row g-1">
-                        <div class="col px-1">
-                            <video class="lazy-video" playsinline autoplay loop muted controls data-src="./videos/Real/t1/1.mp4"
-                                width="100%"></video>
-                        </div>
-                        <div class="col px-1">
-                            <video class="lazy-video" playsinline autoplay loop muted controls data-src="./videos/Real/t1/2.mp4"
-                                width="100%"></video>
-                        </div>
-                    </div>
-                </div>
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column">
+                <h2 class="title is-3 no-accent">Simulation Results and Visualization</h2>
             </div>
+        </div>
+
+        <div class="figure-card" style="padding:1rem; margin-bottom:2.5rem;">
+        <div style="overflow-x:auto;">
+        <table class="sota-table">
+            <thead>
+                <tr>
+                    <th rowspan="2" class="col-sep">Method</th>
+                    <th rowspan="2" class="col-sep">Size</th>
+                    <th colspan="3" class="col-sep">Observation</th>
+                    <th colspan="2" class="col-sep">Prediction</th>
+                    <th colspan="4" class="col-sep">R2R-CE Val-Unseen</th>
+                    <th colspan="3">RxR-CE Val-Unseen</th>
+                </tr>
+                <tr>
+                    <th>Pano.</th><th>Depth</th><th class="col-sep">RGB</th>
+                    <th>Extra</th><th class="col-sep">Action</th>
+                    <th>NE↓</th><th>OSR↑</th><th>SR↑</th><th class="col-sep">SPL↑</th>
+                    <th>NE↓</th><th>SR↑</th><th>SPL↑</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Panoramic RGB-D -->
+                <tr class="group-header"><td colspan="14">Panoramic RGB-D Agent</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">ETPNav</td><td class="col-sep">-</td><td>✓</td><td>✓</td><td class="col-sep">✗</td><td>✗</td><td class="col-sep">✓</td><td>4.7</td><td>65.0</td><td>57.0</td><td class="col-sep">49.0</td><td>5.6</td><td>54.8</td><td>44.9</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">CLASH</td><td class="col-sep">-</td><td>✓</td><td>✓</td><td class="col-sep">✗</td><td>✗</td><td class="col-sep">✓</td><td>4.1</td><td>73.0</td><td>65.0</td><td class="col-sep">55.0</td><td>-</td><td>-</td><td>-</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">D3D-VLP</td><td class="col-sep">2B</td><td>✓</td><td>✓</td><td class="col-sep">✗</td><td>✗</td><td class="col-sep">✓</td><td>4.7</td><td>67.2</td><td>61.3</td><td class="col-sep">56.1</td><td>-</td><td>-</td><td>-</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">ETP-R1</td><td class="col-sep">-</td><td>✓</td><td>✓</td><td class="col-sep">✗</td><td>✗</td><td class="col-sep">✓</td><td>3.9</td><td>72.0</td><td>65.0</td><td class="col-sep">56.0</td><td>5.2</td><td>59.9</td><td>49.0</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">P³Nav</td><td class="col-sep">-</td><td>✓</td><td>✓</td><td class="col-sep">✗</td><td>✗</td><td class="col-sep">✓</td><td>4.4</td><td>69.0</td><td>62.0</td><td class="col-sep">52.0</td><td>5.4</td><td>58.0</td><td>47.9</td></tr>
+                <!-- Panoramic RGB -->
+                <tr class="group-header"><td colspan="14">Panoramic RGB Agent</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">AO-Planner</td><td class="col-sep">-</td><td>✓</td><td>✗</td><td class="col-sep">✗</td><td>✗</td><td class="col-sep">✓</td><td>5.6</td><td>59.0</td><td>47.0</td><td class="col-sep">33.0</td><td>7.1</td><td>43.3</td><td>30.5</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">NavFoM</td><td class="col-sep">7B</td><td>✓</td><td>✗</td><td class="col-sep">✗</td><td>✗</td><td class="col-sep">✓</td><td>4.6</td><td>72.1</td><td>61.7</td><td class="col-sep">55.3</td><td>4.7</td><td>64.4</td><td>56.2</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">ABot-N0</td><td class="col-sep">4B</td><td>✓</td><td>✗</td><td class="col-sep">✗</td><td>✗</td><td class="col-sep">✓</td><td><u style="text-decoration-style:dotted;">3.8</u></td><td>70.8</td><td>66.4</td><td class="col-sep"><u style="text-decoration-style:dotted;">63.9</u></td><td><strong>3.8</strong></td><td><u style="text-decoration-style:dotted;">69.3</u></td><td><u style="text-decoration-style:dotted;">60.0</u></td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">NavForesee</td><td class="col-sep">3B</td><td>✓</td><td>✗</td><td class="col-sep">✗</td><td>✓</td><td class="col-sep">✓</td><td>3.9</td><td><u>78.4</u></td><td>66.2</td><td class="col-sep">59.7</td><td><u style="text-decoration-style:dotted;">4.2</u></td><td>66.3</td><td>53.2</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">SPAN-Nav</td><td class="col-sep">-</td><td>✓</td><td>✗</td><td class="col-sep">✗</td><td>✓</td><td class="col-sep">✓</td><td>4.1</td><td>75.3</td><td>66.3</td><td class="col-sep">59.3</td><td><u style="text-decoration-style:dotted;">4.2</u></td><td><strong>69.7</strong></td><td><u>60.1</u></td></tr>
+                <!-- Egocentric RGB-D -->
+                <tr class="group-header"><td colspan="14">Egocentric RGB-D Agent</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">NaVid-4D</td><td class="col-sep">7B</td><td>✗</td><td>✓</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>6.0</td><td>55.7</td><td>43.8</td><td class="col-sep">37.1</td><td>-</td><td>-</td><td>-</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">Dynam3D</td><td class="col-sep">7B</td><td>✗</td><td>✓</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>5.3</td><td>62.1</td><td>52.9</td><td class="col-sep">45.7</td><td>-</td><td>-</td><td>-</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">NavMorph</td><td class="col-sep">-</td><td>✗</td><td>✓</td><td class="col-sep">✓</td><td>✓</td><td class="col-sep">✓</td><td>5.8</td><td>56.9</td><td>47.9</td><td class="col-sep">33.2</td><td>8.9</td><td>30.8</td><td>22.8</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">InternVLA-N1</td><td class="col-sep">8B</td><td>✗</td><td>✓</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>4.8</td><td>63.3</td><td>58.2</td><td class="col-sep">54.0</td><td>5.9</td><td>53.5</td><td>46.1</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">AgentVLN</td><td class="col-sep">3B</td><td>✗</td><td>✓</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>3.9</td><td>73.5</td><td><u style="text-decoration-style:dotted;">67.2</u></td><td class="col-sep"><u>64.7</u></td><td><u>3.9</u></td><td><u>69.5</u></td><td><strong>61.3</strong></td></tr>
+                <!-- Egocentric RGB -->
+                <tr class="group-header"><td colspan="14">Egocentric RGB Agent</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">NaVid</td><td class="col-sep">7B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>5.5</td><td>49.1</td><td>37.4</td><td class="col-sep">35.9</td><td>-</td><td>-</td><td>-</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">Uni-NaVid</td><td class="col-sep">7B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>5.6</td><td>53.3</td><td>47.0</td><td class="col-sep">42.7</td><td>6.2</td><td>48.7</td><td>40.9</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">NaVILA</td><td class="col-sep">8B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>5.2</td><td>62.5</td><td>54.0</td><td class="col-sep">49.0</td><td>6.8</td><td>49.3</td><td>44.0</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">StreamVLN</td><td class="col-sep">7B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>5.0</td><td>64.2</td><td>56.9</td><td class="col-sep">51.9</td><td>6.2</td><td>52.9</td><td>46.0</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">InternVLA-N1</td><td class="col-sep">8B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>4.9</td><td>60.6</td><td>55.4</td><td class="col-sep">52.1</td><td>6.4</td><td>49.5</td><td>41.8</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">NavFoM</td><td class="col-sep">7B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>5.0</td><td>64.9</td><td>56.2</td><td class="col-sep">51.2</td><td>5.5</td><td>57.4</td><td>49.4</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">DualVLN</td><td class="col-sep">8B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>4.1</td><td>70.7</td><td>64.3</td><td class="col-sep">58.5</td><td>4.6</td><td>61.4</td><td>51.8</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">Efficient-VLN</td><td class="col-sep">4B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>4.2</td><td>73.7</td><td>64.2</td><td class="col-sep">55.9</td><td><u>3.9</u></td><td>67.0</td><td>54.3</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">JanusVLN</td><td class="col-sep">8B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>4.8</td><td>65.2</td><td>60.5</td><td class="col-sep">56.8</td><td>6.1</td><td>56.2</td><td>47.5</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">PROSPECT</td><td class="col-sep">9B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✓</td><td class="col-sep">✓</td><td>4.9</td><td>65.2</td><td>58.9</td><td class="col-sep">54.0</td><td>5.7</td><td>54.6</td><td>46.2</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">SACA</td><td class="col-sep">8B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>4.2</td><td>69.3</td><td>64.7</td><td class="col-sep">56.9</td><td>4.8</td><td>62.1</td><td>51.7</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">NaVIDA</td><td class="col-sep">3B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>4.3</td><td>69.5</td><td>61.4</td><td class="col-sep">54.7</td><td>5.2</td><td>57.4</td><td>49.6</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">DyGeoVLN</td><td class="col-sep">9B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✓</td><td class="col-sep">✓</td><td>4.4</td><td>70.1</td><td>60.8</td><td class="col-sep">55.8</td><td>-</td><td>-</td><td>-</td></tr>
+                <tr><td class="col-sep" style="text-align:left; padding:4px 6px; ">DecoVLN</td><td class="col-sep">7B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✗</td><td class="col-sep">✓</td><td>5.0</td><td>63.5</td><td>56.3</td><td class="col-sep">50.5</td><td>5.7</td><td>54.2</td><td>46.3</td></tr>
+                <!-- StereoNav rows -->
+                <tr class="row-light">
+                    <td class="col-sep" style="text-align:left; padding:4px 6px;  font-weight:600;">StereoNav</td><td class="col-sep">3B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✓</td><td class="col-sep">✓</td>
+                    <td><u>3.0</u> <span style="color:#1a6fc4; font-size:0.75em;">(-1.1)</span></td>
+                    <td><u style="text-decoration-style:dotted;">76.6</u> <span style="color:#1a6fc4; font-size:0.75em;">(+2.9)</span></td>
+                    <td><u>72.8</u> <span style="color:#1a6fc4; font-size:0.75em;">(+8.1)</span></td>
+                    <td class="col-sep">56.4 <span style="color:#1a6fc4; font-size:0.75em;">(+2.1)</span></td>
+                    <td>5.9 <span style="color:#e74c3c; font-size:0.75em;">(+2.0)</span></td>
+                    <td>58.0 <span style="color:#e74c3c; font-size:0.75em;">(-9.0)</span></td>
+                    <td>43.5 <span style="color:#e74c3c; font-size:0.75em;">(-8.5)</span></td>
+                </tr>
+                <tr class="row-dark">
+                    <td class="col-sep" style="text-align:left; padding:4px 6px;  font-weight:600;">StereoNav</td><td class="col-sep">3B</td><td>✗</td><td>✗</td><td class="col-sep">✓</td><td>✓</td><td class="col-sep">✓</td>
+                    <td><strong>2.1</strong> <span style="color:#1a6fc4; font-size:0.75em;">(-2.0)</span></td>
+                    <td><strong>82.4</strong> <span style="color:#1a6fc4; font-size:0.75em;">(+8.7)</span></td>
+                    <td><strong>81.1</strong> <span style="color:#1a6fc4; font-size:0.75em;">(+16.4)</span></td>
+                    <td class="col-sep"><strong>68.3</strong> <span style="color:#1a6fc4; font-size:0.75em;">(+9.8)</span></td>
+                    <td>4.6 <span style="color:#e74c3c; font-size:0.75em;">(+0.7)</span></td>
+                    <td>67.5 <span style="color:#1a6fc4; font-size:0.75em;">(+0.5)</span></td>
+                    <td>52.0 <span style="color:#e74c3c; font-size:0.75em;">(-2.3)</span></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <p style="font-size:0.78rem; color:#888; margin-top:0.6rem; text-align:left;">
+            <strong>Note:</strong> Light/dark blue rows = StereoNav w/o and w/ external data. Top-3: <strong>bold</strong>, <u>underline</u>, dotted underline.
+        </p>
+        </div>
+
+        <!-- R2R -->
+        <div style="margin-bottom: 2.5rem;">
+            <h3 class="title is-5" style="text-align: center; margin-bottom: 1rem; padding: 0.4rem 1rem; border-left: 4px solid #1a6fc4; border-right: 4px solid #1a6fc4; background: #f4f8ff; border-radius: 4px; box-sizing: border-box;">Visualization on R2R-CE</h3>
+            <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 6px;">
+                <div class="stereo-wrap"><span class="stereo-label">Left</span><video playsinline autoplay loop muted src="./videos/simulation/r2r/r2r_QUCTc6BB5sX_19_stereo.mp4"></video><button class="stereo-side-btn left-btn" onclick="setStereo(this,false)">&#8249;</button><button class="stereo-side-btn right-btn" onclick="setStereo(this,true)">&#8250;</button></div>
+                <div class="stereo-wrap"><span class="stereo-label">Left</span><video playsinline autoplay loop muted src="./videos/simulation/r2r/r2r_X7HyMhZNoso_46_stereo.mp4"></video><button class="stereo-side-btn left-btn" onclick="setStereo(this,false)">&#8249;</button><button class="stereo-side-btn right-btn" onclick="setStereo(this,true)">&#8250;</button></div>
+                <div class="stereo-wrap"><span class="stereo-label">Left</span><video playsinline autoplay loop muted src="./videos/simulation/r2r/r2r_pLe4wQe7qrG_412_stereo.mp4"></video><button class="stereo-side-btn left-btn" onclick="setStereo(this,false)">&#8249;</button><button class="stereo-side-btn right-btn" onclick="setStereo(this,true)">&#8250;</button></div>
+                <div class="stereo-wrap"><span class="stereo-label">Left</span><video playsinline autoplay loop muted src="./videos/simulation/r2r/r2r_x8F5xyUWy9e_7_stereo.mp4"></video><button class="stereo-side-btn left-btn" onclick="setStereo(this,false)">&#8249;</button><button class="stereo-side-btn right-btn" onclick="setStereo(this,true)">&#8250;</button></div>
+                <div class="stereo-wrap"><span class="stereo-label">Left</span><video playsinline autoplay loop muted src="./videos/simulation/r2r/r2r_zsNo4HB9uLZ_1_stereo.mp4"></video><button class="stereo-side-btn left-btn" onclick="setStereo(this,false)">&#8249;</button><button class="stereo-side-btn right-btn" onclick="setStereo(this,true)">&#8250;</button></div>
+            </div>
+            <p style="text-align:center; color:#888; font-size:0.85rem; margin: 0.3rem 0 0.8rem;">Stereo Egocentric View</p>
+            <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 6px;">
+                <video playsinline autoplay loop muted style="width:100%; border-radius:6px;" src="./videos/simulation/r2r/r2r_QUCTc6BB5sX_19_depth.mp4"></video>
+                <video playsinline autoplay loop muted style="width:100%; border-radius:6px;" src="./videos/simulation/r2r/r2r_X7HyMhZNoso_46_depth.mp4"></video>
+                <video playsinline autoplay loop muted style="width:100%; border-radius:6px;" src="./videos/simulation/r2r/r2r_pLe4wQe7qrG_412_depth.mp4"></video>
+                <video playsinline autoplay loop muted style="width:100%; border-radius:6px;" src="./videos/simulation/r2r/r2r_x8F5xyUWy9e_7_depth.mp4"></video>
+                <video playsinline autoplay loop muted style="width:100%; border-radius:6px;" src="./videos/simulation/r2r/r2r_zsNo4HB9uLZ_1_depth.mp4"></video>
+            </div>
+            <p style="text-align:center; color:#888; font-size:0.85rem; margin: 0.3rem 0 0;">Depth Prediction</p>
+        </div>
+
+        <!-- RxR -->
+        <div>
+            <h3 class="title is-5" style="text-align: center; margin-bottom: 1rem; padding: 0.4rem 1rem; border-left: 4px solid #1a6fc4; border-right: 4px solid #1a6fc4; background: #f4f8ff; border-radius: 4px; box-sizing: border-box;">Visualization on RxR-CE</h3>
+            <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 6px;">
+                <div class="stereo-wrap"><span class="stereo-label">Left</span><video playsinline autoplay loop muted src="./videos/simulation/rxr/rxr_2azQ1b91cZZ_4_stereo.mp4"></video><button class="stereo-side-btn left-btn" onclick="setStereo(this,false)">&#8249;</button><button class="stereo-side-btn right-btn" onclick="setStereo(this,true)">&#8250;</button></div>
+                <div class="stereo-wrap"><span class="stereo-label">Left</span><video playsinline autoplay loop muted src="./videos/simulation/rxr/rxr_EU6Fwq7SyZv_46_stereo.mp4"></video><button class="stereo-side-btn left-btn" onclick="setStereo(this,false)">&#8249;</button><button class="stereo-side-btn right-btn" onclick="setStereo(this,true)">&#8250;</button></div>
+                <div class="stereo-wrap"><span class="stereo-label">Left</span><video playsinline autoplay loop muted src="./videos/simulation/rxr/rxr_QUCTc6BB5sX_58_stereo.mp4"></video><button class="stereo-side-btn left-btn" onclick="setStereo(this,false)">&#8249;</button><button class="stereo-side-btn right-btn" onclick="setStereo(this,true)">&#8250;</button></div>
+                <div class="stereo-wrap"><span class="stereo-label">Left</span><video playsinline autoplay loop muted src="./videos/simulation/rxr/rxr_Z6MFQCViBuw_22_stereo.mp4"></video><button class="stereo-side-btn left-btn" onclick="setStereo(this,false)">&#8249;</button><button class="stereo-side-btn right-btn" onclick="setStereo(this,true)">&#8250;</button></div>
+                <div class="stereo-wrap"><span class="stereo-label">Left</span><video playsinline autoplay loop muted src="./videos/simulation/rxr/rxr_x8F5xyUWy9e_73_stereo.mp4"></video><button class="stereo-side-btn left-btn" onclick="setStereo(this,false)">&#8249;</button><button class="stereo-side-btn right-btn" onclick="setStereo(this,true)">&#8250;</button></div>
+            </div>
+            <p style="text-align:center; color:#888; font-size:0.85rem; margin: 0.3rem 0 0.8rem;">Stereo Egocentric View</p>
+            <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 6px;">
+                <video playsinline autoplay loop muted style="width:100%; border-radius:6px;" src="./videos/simulation/rxr/rxr_2azQ1b91cZZ_4_depth.mp4"></video>
+                <video playsinline autoplay loop muted style="width:100%; border-radius:6px;" src="./videos/simulation/rxr/rxr_EU6Fwq7SyZv_46_depth.mp4"></video>
+                <video playsinline autoplay loop muted style="width:100%; border-radius:6px;" src="./videos/simulation/rxr/rxr_QUCTc6BB5sX_58_depth.mp4"></video>
+                <video playsinline autoplay loop muted style="width:100%; border-radius:6px;" src="./videos/simulation/rxr/rxr_Z6MFQCViBuw_22_depth.mp4"></video>
+                <video playsinline autoplay loop muted style="width:100%; border-radius:6px;" src="./videos/simulation/rxr/rxr_x8F5xyUWy9e_73_depth.mp4"></video>
+            </div>
+            <p style="text-align:center; color:#888; font-size:0.85rem; margin: 0.3rem 0 0;">Depth Prediction</p>
         </div>
     </div>
 </section>
@@ -313,55 +598,49 @@
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
             <div class="column">
-                <h2 class="title is-3">Visualization Results on Real-World</h2>
+                <h2 class="title is-3 no-accent">Real-World Visualization</h2>
             </div>
         </div>
 
-        <style>
-            .vid-card { border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-            .scene-block { margin-bottom: 3rem; }
-            .scene-block h3 { margin-bottom: 1rem; }
-        </style>
-
-        <div class="scene-block">
-            <h3 class="title is-4 has-text-centered">Lobby</h3>
-            <div class="columns is-centered" style="margin-bottom:0.5rem;">
-                <div class="column"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/lobby/1.mp4" width="100%"></video></div>
+        <div style="margin-bottom: 2.5rem;">
+            <h3 class="title is-5" style="text-align: center; margin-bottom: 1rem; padding: 0.4rem 1rem; border-left: 4px solid #1a6fc4; border-right: 4px solid #1a6fc4; background: #f4f8ff; border-radius: 4px; box-sizing: border-box; color: #1a6fc4;">Lobby Scene</h3>
+            <div style="margin-bottom: 6px;">
+                <div class="rw-wrap playing"><video playsinline autoplay muted loop controls style="width:100%; border-radius:6px;" src="./videos/real_world/lobby/1.mp4"></video></div>
             </div>
-            <div class="columns is-centered">
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/lobby/2.mp4" width="100%"></video></div>
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/lobby/3.mp4" width="100%"></video></div>
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/lobby/4.mp4" width="100%"></video></div>
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 6px;">
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/lobby/2.mp4"></video></div>
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/lobby/3.mp4"></video></div>
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/lobby/4.mp4"></video></div>
             </div>
         </div>
 
-        <div class="scene-block">
-            <h3 class="title is-4 has-text-centered">Outdoor</h3>
-            <div class="columns is-centered" style="margin-bottom:0.5rem;">
-                <div class="column"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/outdoor/1.mp4" width="100%"></video></div>
+        <div style="margin-bottom: 2.5rem;">
+            <h3 class="title is-5" style="text-align: center; margin-bottom: 1rem; padding: 0.4rem 1rem; border-left: 4px solid #1a6fc4; border-right: 4px solid #1a6fc4; background: #f4f8ff; border-radius: 4px; box-sizing: border-box; color: #1a6fc4;">Outdoor Scene</h3>
+            <div style="margin-bottom: 6px;">
+                <div class="rw-wrap playing"><video playsinline autoplay muted loop controls style="width:100%; border-radius:6px;" src="./videos/real_world/outdoor/1.mp4"></video></div>
             </div>
-            <div class="columns is-centered">
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/outdoor/2.mp4" width="100%"></video></div>
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/outdoor/3.mp4" width="100%"></video></div>
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/outdoor/4.mp4" width="100%"></video></div>
-            </div>
-        </div>
-
-        <div class="scene-block">
-            <h3 class="title is-4 has-text-centered">Gym</h3>
-            <div class="columns is-centered">
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/gym/1.mp4" width="100%"></video></div>
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/gym/2.mp4" width="100%"></video></div>
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/gym/3.mp4" width="100%"></video></div>
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 6px;">
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/outdoor/2.mp4"></video></div>
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/outdoor/3.mp4"></video></div>
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/outdoor/4.mp4"></video></div>
             </div>
         </div>
 
-        <div class="scene-block">
-            <h3 class="title is-4 has-text-centered">Office</h3>
-            <div class="columns is-centered">
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/office/1.mp4" width="100%"></video></div>
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/office/2.mp4" width="100%"></video></div>
-                <div class="column is-one-third"><video class="vid-card lazy-video" playsinline autoplay loop muted controls data-src="./videos/real_world/office/3.mp4" width="100%"></video></div>
+        <div style="margin-bottom: 2.5rem;">
+            <h3 class="title is-5" style="text-align: center; margin-bottom: 1rem; padding: 0.4rem 1rem; border-left: 4px solid #1a6fc4; border-right: 4px solid #1a6fc4; background: #f4f8ff; border-radius: 4px; box-sizing: border-box; color: #1a6fc4;">Gym Scene</h3>
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 6px;">
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/gym/1.mp4"></video></div>
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/gym/2.mp4"></video></div>
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/gym/3.mp4"></video></div>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="title is-5" style="text-align: center; margin-bottom: 1rem; padding: 0.4rem 1rem; border-left: 4px solid #1a6fc4; border-right: 4px solid #1a6fc4; background: #f4f8ff; border-radius: 4px; box-sizing: border-box; color: #1a6fc4;">Office Scene</h3>
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 6px;">
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/office/1.mp4"></video></div>
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/office/2.mp4"></video></div>
+                <div class="rw-wrap"><div class="play-overlay" onclick="rwPlay(this)"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div><video controls style="width:100%; border-radius:6px;" src="./videos/real_world/office/3.mp4"></video></div>
             </div>
         </div>
     </div>
@@ -374,28 +653,10 @@
         <div class="container is-max-desktop content">
             <h2 class="title">Citation</h2>
             <pre><code>
-@inproceedings{cheng2024navila,
-title = {NaVILA: Legged Robot Vision-Language-Action Model for Navigation},
-    author = {Cheng, An-Chieh and Ji, Yandong and Yang, Zhaojing and Zou, Xueyan and Kautz, Jan and Biyik, Erdem and Yin,
-    Hongxu and Liu, Sifei and Wang, Xiaolong},
-    booktitle = {RSS},
-    year = {2025},
-}
   </code></pre>
         </div>
     </section>
 
-
-    <section class="section" id="Acknowledgement">
-        <div class="container is-max-desktop content">
-            <h2 class="title">Acknowledgement</h2>
-            <p>
-                We sincerely thank Chengjing Yuan for their support with hardware setup and 3D modeling. We also thank Xuxin Cheng and
-                Jialong Li for
-                their help in setting up the G1 robot, as well as Jiazhao Zhang and Yukang Chen for their valuable discussions.
-            </p>
-        </div>
-    </section>
 
 
 
@@ -416,6 +677,20 @@ title = {NaVILA: Legged Robot Vision-Language-Action Model for Navigation},
         }, { rootMargin: '200px' });
         lazyVideos.forEach(video => observer.observe(video));
     });
+    </script>
+    <script>
+    function setStereo(btn, isRight) {
+        const wrap = btn.parentElement;
+        const label = wrap.querySelector('.stereo-label');
+        wrap.classList.toggle('right', isRight);
+        label.textContent = isRight ? 'Right' : 'Left';
+    }
+    function rwPlay(overlay) {
+        const wrap = overlay.parentElement;
+        const video = wrap.querySelector('video');
+        wrap.classList.add('playing');
+        video.play();
+    }
     </script>
 
 </body>
